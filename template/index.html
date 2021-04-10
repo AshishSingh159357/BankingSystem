@@ -1,0 +1,65 @@
+<html>
+<head>
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'Navbar.css' %}">
+<link rel="stylesheet" href="{% static 'TableCss.css' %}">
+
+</head>
+<body>
+
+<!--Navbar-->
+  <header class="header">
+        <h1 class="logo"><a href="#">Bank</a></h1>
+        <ul class="main-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/view">View Customer</a></li>
+            
+        </ul>
+    </header>
+
+	
+	
+	
+<!--this table html-->
+	
+	<h2>Responsive Table</h2>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>Username</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Balance</th>
+                <th>Operation</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for user in user %}
+        <form method="POST" action="">
+         <tr>
+            <td>{{ user.Username }}</td>
+            <td>  {{ user.name }}</td>
+            <td> {{ user.email }}</td>
+            <td>Rs.{{ user.balance }}</td>
+             <th><button type="submit" value={{user.Username}} name="user">  {% csrf_token %}Transfer </button></th>
+        </tr>
+        </form>
+        {% endfor %}
+       
+ 
+        <tbody>
+    </table>
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

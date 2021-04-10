@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+{% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'Home.css' %}">
+
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="logo"><a href="#">Bank</a></h1>
+        <ul class="main-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/view">View Customer</a></li>
+            
+        </ul>
+    </header>
+
+
+    <div class="section-2">
+        <div>
+            <p> welcome to X.Y.Z Bank</p>
+        </div>
+
+        <div>
+            <img src="{% static '1.svg' %}">
+        </div>
+
+    </div>
+    <div class="section-3">
+
+        <div>
+            <img src="{% static '2.svg' %}">
+            <p class="">Savings</p>
+        </div>
+        <div>
+            <img src="{% static '3.svg' %}">
+            <p class="">Accounts</p>
+        </div>
+        <div>
+            <img src="{% static '4.svg' %}">
+            <p class="">Wallet</p>
+        </div>
+
+    </div>
+</body>
+
+</html>

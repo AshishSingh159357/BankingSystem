@@ -1,0 +1,64 @@
+<html>
+
+<head>
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'Navbar.css' %}">
+<link rel="stylesheet" href="{% static 'Registeration.css' %}">
+</head>
+<body>
+<header class="header">
+		<h1 class="logo"><a href="#">Bank</a></h1>
+      <ul class="main-nav">
+        <li><a href="/bank">View Customer</a></li>
+          <li><a href="/bank/Registeration">Registeration</a></li>
+      </ul>
+</header> 
+	
+	
+	
+<div>	
+  <div class="login">
+    <div class="login-screen">
+      <div class="app-title">
+        <h1>Register</h1>
+      </div>
+ <form method="POST" action="">
+                {% csrf_token %}
+                    
+      <div class="login-form">
+        <div class="control-group">
+        <input type="text" class="login-field" name="username" value="" placeholder="username" id="login-name">
+        <label class="login-field-icon fui-user" for="login-name"></label>
+        </div>
+        
+        <div class="control-group">
+        <input type="text" class="login-field" name="name" value="" placeholder="name" id="login-name">
+        <label class="login-field-icon fui-user" for="login-name"></label>
+        </div>
+        
+        <div class="control-group">
+        <input type="text" class="login-field" value="" name="email" placeholder="email" id="login-name">
+        <label class="login-field-icon fui-user" for="login-name"></label>
+        </div>
+        
+        <div class="control-group">
+        <input type="text" class="login-field" value="" name="balance" placeholder="balance" id="login-name">
+        <label class="login-field-icon fui-user" for="login-name"></label>
+        </div>
+
+        <div class="control-group">
+        <input type="password" class="login-field" name="password" value="" placeholder="password" id="login-pass">
+        <label class="login-field-icon fui-lock" for="login-pass"></label>
+        </div>
+
+      <button type="submit" class="btn btn-primary">Primary</button>
+        <a class="login-link" href="#">Lost your password?</a>
+      </div>
+     </form>
+      
+    </div>
+  </div>
+</div>
+</body>
+<html>
